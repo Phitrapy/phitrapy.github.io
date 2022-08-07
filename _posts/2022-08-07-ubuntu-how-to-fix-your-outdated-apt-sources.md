@@ -36,5 +36,6 @@ In order to avoid this annoying situation, here is a friendly reminder to:
 * Update your distro **regularly**
 * Consider using a *Long Term Support* version (LTS) rather than the others
 * Use **apt full-upgrade** and the **do-release-upgrade** tool to easily upgrade your distro
+* Take a look at the [Ubuntu List of Releases](https://wiki.ubuntu.com/Releases) to check which versions are LTS, and when they reach their EOL.
 
 That's all for today... Keep your env up to date, and stay hydrated.

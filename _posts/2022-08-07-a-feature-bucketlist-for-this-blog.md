@@ -12,4 +12,5 @@ I want to share them here, though I might convert them to gitlab issues!
 __Here is the list:__
 * Internationalization 🇫🇷 / 🇬🇧
 * A custom theme! 🎨
-* A comment section 💬
+* A comment section 💬 (with [staticman](https://staticman.net/)? Usefull [info here](https://mademistakes.com/mastering-jekyll/static-comments-improved/))
+* Pictures for my blog posts
