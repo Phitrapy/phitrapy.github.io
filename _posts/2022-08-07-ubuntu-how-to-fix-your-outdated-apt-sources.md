@@ -32,7 +32,7 @@ There, we replaced the main repos for `old-releases.ubuntu.com`.
 And that's it! Now we can do all the remaining updates in order to upgrade the distro!
 
 ## Reminder
-In order to avoid this annoying situation ever again, here is a friendly reminder to:
+In order to avoid this annoying situation, here is a friendly reminder to:
 * Update your distro **regularly**
 * Consider using a *Long Term Support* version (LTS) rather than the others
 * Use **apt full-upgrade** and the **do-release-upgrade** tool to easily upgrade your distro
