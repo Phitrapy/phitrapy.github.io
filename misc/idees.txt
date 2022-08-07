@@ -1,0 +1,14 @@
+# Idées de post
+
+* Mettre à jour une trop vieille version de Ubuntu
+    * Symptomes:
+        * `apt update` avec beaucoup de "Ign" et 404...
+        * `do-release-upgrade` en PLS...
+    * Résolution
+        * Changer les sources APT vers les "old-releases"
+        * sudo sed -i -r 's/([a-z]{2}.)?archive.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+        * sudo sed -i -r 's/security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+* Ajouter des emotes partout avec l'appli Emote
+* Nx: Comment ça se passe?
+* Nx: Storybook, comment afficher toutes les stories
+* Github pages : comment ça marche? Forces et frustrations
