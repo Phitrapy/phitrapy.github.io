@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I'm Phitrapy, currently working as a front-end developper in Nantes, at [RCA](https://rca.fr/).
+I'm Phitrapy, currently working as a front-end developper in Nantes, France, at [RCA](https://rca.fr/).
 
 I love how IT has so many interesting fields to explore... This is why I keep fiddling with it!
 
