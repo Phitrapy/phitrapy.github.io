@@ -14,3 +14,5 @@ __Here is the list:__
 * A custom theme! 🎨
 * A comment section 💬 (with [staticman](https://staticman.net/)? Usefull [info here](https://mademistakes.com/mastering-jekyll/static-comments-improved/))
 * Pictures for my blog posts
+* Thumbnails to display the pictures for my post list
+* A "last modified" feature for blog posts
