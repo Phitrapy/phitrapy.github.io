@@ -7,3 +7,4 @@
 [] Github pages : comment ça marche? Forces et frustrations
 [] Mon serveur minecraft: Comment et pourquoi?
 [] Migration Karma -> Jest: comment faire en apportant le moins de modifications possibles?
+[] Gitpod!
