@@ -1,0 +1,27 @@
+#!/bin/sh
+
+
+
+# Custom hook behavior
+echo "## Updating last modified date for modified posts"
+
+FILES=$(git diff --cached --name-only --diff-filter=ACMR ./_posts | sed 's| |\\ |g')
+oui='oui\:non'
+# echo "$FILES"
+
+for f in $FILES
+do
+  echo "Processing file $f..."
+  LAST_MODIFIED_DATE_LINE=`grep -n "lastModifiedDate" $f`
+  LAST_MODIFIED_DATE_LINE_NB=`echo $LAST_MODIFIED_DATE_LINE | cut -d: -f1`
+  now=`date +'%y-%m-%d'`
+
+  if [ "$LAST_MODIFIED_DATE_LINE" = "" ]
+  then
+    echo "\tAttribute lastModified not found"
+    sed -i "2i lastModifiedDate: $now" "$f"
+  else
+    echo "\tFound lastModified ($LAST_MODIFIED_DATE_LINE)"
+    sed -i "`$LAST_MODIFIED_DATE_LINE_NB`i $now" "$f"
+  fi
+done         
