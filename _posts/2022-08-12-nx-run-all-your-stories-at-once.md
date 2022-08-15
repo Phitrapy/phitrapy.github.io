@@ -3,6 +3,7 @@ layout: post
 title: "Nx: Run all your stories at once"
 date:   2022-08-12 16:37:00 +0200
 categories: dev storybook nx stories workspace front-end monorepo
+lastModifiedDate: 2022-08-15 17:40:08 +0200
 ---
 
 Storybook is a great tool for component development, review, and documentation.
@@ -13,7 +14,7 @@ If you're a total beginner with storybook on an Nx workplace, you can start here
 * For angular: [read the review](https://nx.dev/storybook/overview-angular)
 * For react: [read the review](https://nx.dev/storybook/overview-react)
 
-## What's the fuss?
+## What the fuss?
 
 The thing is... You will have to run a distinct Storybook instance per library, splitting your stories among them.
 

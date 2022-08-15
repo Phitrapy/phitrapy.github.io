@@ -8,3 +8,4 @@
 [] Mon serveur minecraft: Comment et pourquoi?
 [] Migration Karma -> Jest: comment faire en apportant le moins de modifications possibles?
 [] Gitpod!
+[] Comment j'ai ajouté un hook mettant à jour l'attribut `lastModifiedDate` de mes posts
