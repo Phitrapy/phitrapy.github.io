@@ -6,22 +6,32 @@
 echo "## Updating last modified date for modified posts"
 
 FILES=$(git diff --cached --name-only --diff-filter=ACMR ./_posts | sed 's| |\\ |g')
-oui='oui\:non'
-# echo "$FILES"
+
+echo "$FILES"
 
 for f in $FILES
 do
   echo "Processing file $f..."
-  LAST_MODIFIED_DATE_LINE=`grep -n "lastModifiedDate" $f`
-  LAST_MODIFIED_DATE_LINE_NB=`echo $LAST_MODIFIED_DATE_LINE | cut -d: -f1`
-  now=`date +'%y-%m-%d'`
+  lastModifiedDateLine=`grep -n "lastModifiedDate" $f`
+  lastModifiedDateLine_nb=`grep -n "lastModifiedDate" $f | sed -n 1p | cut -d: -f1`
+  postDataEndLine_nb=`grep -n "\-\-\-" $f | sed -n 2p | cut -d: -f1`
 
-  if [ "$LAST_MODIFIED_DATE_LINE" = "" ]
+  #now=`date +'%y-%m-%d'`
+  now=`date +"%Y-%m-%d %H:%M:%S %z"`
+  lastModified="lastModifiedDate: $now"
+
+
+
+  if [ -n lastModifiedDateLine_nb ] && [ $postDataEndLine_nb -gt $lastModifiedDateLine_nb ]
   then
-    echo "\tAttribute lastModified not found"
-    sed -i "2i lastModifiedDate: $now" "$f"
+    echo "\tFound lastModified ($lastModifiedDateLine)"
+    sedLineArg="$lastModifiedDateLine_nb"s
+    sed -i "$lastModifiedDateLine_nb c$lastModified" "$f"
   else
-    echo "\tFound lastModified ($LAST_MODIFIED_DATE_LINE)"
-    sed -i "`$LAST_MODIFIED_DATE_LINE_NB`i $now" "$f"
+    echo "\tAttribute lastModified not found"
+    sedLineArg="$postDataEndLine_nb"i
+    sed -i "$sedLineArg $lastModified" "$f"
   fi
-done         
+
+  git add "$f"
+done
