@@ -1,7 +1,5 @@
 #!/bin/sh
 
-
-
 # Custom hook behavior
 echo "## Updating last modified date for modified posts"
 
@@ -16,7 +14,6 @@ do
   lastModifiedDateLine_nb=`grep -n "lastModifiedDate" $f | sed -n 1p | cut -d: -f1`
   postDataEndLine_nb=`grep -n "\-\-\-" $f | sed -n 2p | cut -d: -f1`
 
-  #now=`date +'%y-%m-%d'`
   now=`date +"%Y-%m-%d %H:%M:%S %z"`
   lastModified="lastModifiedDate: $now"
 
