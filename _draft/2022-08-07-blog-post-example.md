@@ -6,4 +6,3 @@ categories: jekyll features wip
 ---
 
 This is just a blog post example :)
-
