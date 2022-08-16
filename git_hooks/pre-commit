@@ -1,25 +1,21 @@
 #!/bin/sh
 
 # Custom hook behavior
-echo "## Updating last modified date for modified posts"
+echo "# Updating last modified date for modified posts..."
 
 FILES=$(git diff --cached --name-only --diff-filter=ACMR ./_posts | sed 's| |\\ |g')
-
-echo "$FILES"
 
 for f in $FILES
 do
   echo "Processing file $f..."
-  lastModifiedDateLine=`grep -n "lastModifiedDate" $f`
-  lastModifiedDateLine_nb=`grep -n "lastModifiedDate" $f | sed -n 1p | cut -d: -f1`
-  postDataEndLine_nb=`grep -n "\-\-\-" $f | sed -n 2p | cut -d: -f1`
+  lastModifiedDateLine=$(grep -n "lastModifiedDate" "$f")
+  lastModifiedDateLine_nb=$(grep -n "lastModifiedDate" "$f" | sed -n 1p | cut -d: -f1)
+  postDataEndLine_nb=$(grep -n "\-\-\-" "$f" | sed -n 2p | cut -d: -f1)
 
-  now=`date +"%Y-%m-%d %H:%M:%S %z"`
+  now=$(date +"%Y-%m-%d %H:%M:%S %z")
   lastModified="lastModifiedDate: $now"
 
-
-
-  if [ -n lastModifiedDateLine_nb ] && [ $postDataEndLine_nb -gt $lastModifiedDateLine_nb ]
+  if [ -n "$lastModifiedDateLine_nb" ] && [ "$postDataEndLine_nb" -gt "$lastModifiedDateLine_nb" ]
   then
     echo "\tFound lastModified ($lastModifiedDateLine)"
     sedLineArg="$lastModifiedDateLine_nb"s
