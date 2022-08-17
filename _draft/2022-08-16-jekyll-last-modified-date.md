@@ -49,3 +49,10 @@ So, I am just going add one more there! The final output should look like this:
   ---
 ```
 
+## How can I trigger it?
+
+Since the last modified date is a timestamp took from the commit, we can add a pre-commit hook to update the files.
+
+>ℹ️ A git hook is a script which is executed on specific steps of the git flow. The pre-commit hook is triggered. [Read more here](https://delicious-insights.com/fr/articles/git-hooks/)
+
+![Git flow & hooks *by delicious-insights*](https://delicious-insights.com/assets/images/articles/git-hooks.png)
