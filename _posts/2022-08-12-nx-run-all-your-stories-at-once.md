@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Nx: Run all your stories at once"
+author: "Phitrapy"
 date:   2022-08-12 16:37:00 +0200
 categories: dev storybook nx stories workspace front-end monorepo
-lastModifiedDate: 2022-08-16 13:28:10 +0200
+lastModifiedDate: 2022-08-18 18:18:27 +0200
 ---
 
 Storybook is a great tool for component development, review, and documentation.

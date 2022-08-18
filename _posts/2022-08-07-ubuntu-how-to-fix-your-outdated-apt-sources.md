@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Ubuntu: How to fix your outdated apt sources"
+author: "Phitrapy"
 date:   2022-08-07 16:27:00 +0200
 categories: ubuntu linux config apt upgrade tech 
+lastModifiedDate: 2022-08-18 18:18:27 +0200
 ---
 
 Today, as I was trying to install the dependencies to run jekyll on my computer, I ran into a common yet annoying problem: `apt update` would not work anymore...

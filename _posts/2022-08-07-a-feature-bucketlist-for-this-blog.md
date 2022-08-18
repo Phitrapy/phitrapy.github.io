@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "A feature bucketlist for this blog"
+author: "Phitrapy"
 date:   2022-08-07 16:18:00 +0200
 categories: jekyll features wip
-lastModifiedDate: 2022-08-15 17:40:08 +0200
+lastModifiedDate: 2022-08-18 18:18:27 +0200
 ---
 
 I'm just starting this blog, though I already see a few features I'd like to have here... Hopefully I will be able to implement them!

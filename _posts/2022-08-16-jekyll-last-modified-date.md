@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Jekyll : automatically add a lastModified attribute to your posts"
+author: "Phitrapy"
 date:   2022-08-18 16:18:00 +0200
 categories: github pages jekyll bash git hook commit
-lastModifiedDate: 2022-08-18 17:43:20 +0200
+lastModifiedDate: 2022-08-18 18:18:27 +0200
 ---
 
 **[Jekyll](https://jekyllrb.com/)** is an amazing tool to generate static websites & blogs from plain text files!
