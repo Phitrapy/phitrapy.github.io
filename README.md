@@ -4,7 +4,9 @@
 Voir: https://jekyllrb.com/docs/
 
 ## Build, serve, et refresh on changes
-`bundle exec jekyll serve --livereload`
+```
+bundle exec jekyll serve --livereload
+```
 
 ## CLI ?
 https://jekyllrb.com/docs/usage/
