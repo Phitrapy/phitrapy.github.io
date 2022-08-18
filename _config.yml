@@ -52,3 +52,4 @@ plugins:
 #   - vendor/ruby/
 exclude:
   - git_hooks/
+  - misc/
