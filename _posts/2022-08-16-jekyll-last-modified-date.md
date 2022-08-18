@@ -3,7 +3,7 @@ layout: post
 title: "Jekyll : automatically add a lastModified attribute to your posts"
 date:   2022-08-18 16:18:00 +0200
 categories: github pages jekyll bash git hook commit
-lastModifiedDate: 2022-08-18 17:41:24 +0200
+lastModifiedDate: 2022-08-18 17:43:20 +0200
 ---
 
 **[Jekyll](https://jekyllrb.com/)** is an amazing tool to generate static websites & blogs from plain text files!
@@ -60,7 +60,7 @@ Since the last modified date is a timestamp took from the commit, we can add a p
 
 ## Write the hook
 
-> ℹ️ You can find the [source code here 🤓](githubhttps://github.com/Phitrapy/phitrapy.github.io/blob/main/git_hooks/pre-commit)
+> ℹ️ You can find the [source code here 🤓](https://github.com/Phitrapy/phitrapy.github.io/blob/main/git_hooks/pre-commit)
 
 When you are happy with the hook you have written, you have to copy it in the folder `.git/hooks`, with the name `pre-commit`.
 
