@@ -3,8 +3,8 @@ layout: post
 title: "Jekyll : automatically add a lastModified attribute to your posts"
 author: "Phitrapy"
 date:   2022-08-18 16:18:00 +0200
-categories: github pages jekyll bash git hook commit
-lastModifiedDate: 2022-08-18 18:18:27 +0200
+tags: github pages jekyll bash git hook commit
+lastModifiedDate: 2022-08-22 16:34:16 +0200
 ---
 
 **[Jekyll](https://jekyllrb.com/)** is an amazing tool to generate static websites & blogs from plain text files!
@@ -38,7 +38,7 @@ The Jekyll syntax let the user add whatever metata they want. Basically, there a
 >* layout: The name of the layout to use for the post
 >* title: The title of the post
 >* date: The date the post is created
->* categories: A bunch of keywords
+>* tags: A bunch of keywords
 
 So, I am just going add one more there! The final output should look like this:
 ```diff
@@ -46,7 +46,7 @@ So, I am just going add one more there! The final output should look like this:
   layout: post
   title: "My amazing blog post"
   date: 2022-08-07 16:18:00 +0200
-  categories: bleh blah blue
+  tags: bleh blah blue
 + lastModifiedDate: 2022-08-16 12:15:00 +0200
   ---
 ```
