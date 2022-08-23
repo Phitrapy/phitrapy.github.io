@@ -4,7 +4,7 @@ title: "Angular: Migrate to Jest, from Karma + Jasmine"
 author: "Phitrapy"
 date:   2022-08-23 18:12:00 +0200
 tags: angular jest jasmine karma testing
-lastModifiedDate: 2022-08-23 18:13:25 +0200
+lastModifiedDate: 2022-08-23 18:17:43 +0200
 ---
 
 If you have been running an Angular project for a couple years, you may still be using Karma and Jasmine for your unit tests. Actually, as of 2022, the `Karma` + `Jasmine` combo are still the default tools pre-configured during the generation of a new project, using the Angular CLI.
@@ -265,7 +265,7 @@ The default output folder for test reports is `./coverage`. Make sure to add it 
 
 ## Conclusion
 
-Conclusion, you've been through this migration, at least I hope so! 🙏
+Congratulations, you've been through this migration, at least I hope so! 🙏
 
 [Email-me](mailto:clement.begnaud@proton.me) or [submit an issue](https://github.com/Phitrapy/phitrapy.github.io/issues/new) if you would like to give some feedback!
 
