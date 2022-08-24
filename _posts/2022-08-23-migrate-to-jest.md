@@ -4,7 +4,7 @@ title: "Angular: Migrate to Jest, from Karma + Jasmine"
 author: "Phitrapy"
 date:   2022-08-23 18:12:00 +0200
 tags: angular jest jasmine karma testing
-lastModifiedDate: 2022-08-23 18:17:43 +0200
+lastModifiedDate: 2022-08-24 16:09:17 +0200
 ---
 
 If you have been running an Angular project for a couple years, you may still be using Karma and Jasmine for your unit tests. Actually, as of 2022, the `Karma` + `Jasmine` combo are still the default tools pre-configured during the generation of a new project, using the Angular CLI.
@@ -150,8 +150,6 @@ Unfortunately, some of the Jest API is not compatible with Jasmine. Here is a *m
 #### __Add a toolbox__
 
 ```ts
-import MaybeMocked = jest.MaybeMocked;
-
 /**
  * Replace jasmine.createSpyObj(className, ...methodNames) usage
  * @param className the name of the class
@@ -174,6 +172,17 @@ export const customFail = (err: any = `This test shouldn't have failed`) =>
   expect(err || true).toBe(!(err || true));
 ```
 
+#### __Replace `createSpyObj<T>` imports__
+
+Replace all:
+
+```diff
+// imports
+- import createSpyObj  = jasmine.createSpyObj;
++ import { createSpyObj } from 'path/to/the/toolbox';
+```
+
+
 #### __Replace `Spy<T>` by `SpyInstance<T>`__
 
 Replace all:
@@ -186,6 +195,20 @@ Replace all:
 + import Spy = jest.SpyInstance;
 
 // usages if needed: replace "Spy" by "SpyInstance"
+```
+
+#### __Replace `SpyObj<T>` by `MaybeMocked<T>`__
+
+Replace all:
+
+```diff
+// imports
+- import SpyObj  = jasmine.SpyObj;
++ import MaybeMocked  = jest.MaybeMocked;
+// OR
++ import SpyObj = jest.MaybeMocked;
+
+// usages if needed: replace "SpyObj" by "MaybeMocked"
 ```
 
 #### __Replace `and.returnValue` by `mockReturnValue`__
@@ -244,8 +267,6 @@ Replace all:
 ```
 
 #### __Replace `toHaveBeenCalledOnceWith(value)` by `toHaveBeenCalledTimes(1)` and `toHaveBeenCalledWith(value)`__
-
-Remember to import the customFail method from the toolbox, above.
 
 Replace all:
 
